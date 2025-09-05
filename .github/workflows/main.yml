@@ -33,10 +33,10 @@ jobs:
         hl --version
     - name: Install haxelib deps
       run: |
-        haxelib install test/test.hxml
+        cd test && haxelib install test.hxml
     - name: Build tests
       run: |
-        haxe test/test.hxml
+        cd test && haxe test.hxml
     - name: Run tests
       run: |
-        hl test/test.hl
+        cd test && hl test.hl
