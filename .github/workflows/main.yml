@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-samples:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: krdlab/setup-haxe@v1
+      with:
+        haxe-version: 4.3.6
+    - name: Print Haxe version
+      run: |
+        haxe --version
+    - name: Install dependencies for HashLink
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libpng-dev libturbojpeg-dev libvorbis-dev libopenal-dev libsdl2-dev libmbedtls-dev libuv1-dev libglu1-mesa-dev xvfb
+    - name: Install HashLink
+      run: |
+        git clone https://github.com/HaxeFoundation/hashlink.git
+        cd hashlink
+        git checkout master
+        make
+        sudo make install
+        cd ..
+    - name: Verify HashLink installation
+      run: |
+        hl --version
+    - name: Install haxelib deps
+      run: |
+        haxelib install test/test.hxml
+    - name: Build tests
+      run: |
+        haxe test/test.hxml
+    - name: Run tests
+      run: |
+        hl test/test.hl

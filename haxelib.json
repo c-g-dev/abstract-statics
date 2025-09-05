@@ -1,0 +1,14 @@
+{
+  "name": "<TODO>",
+  "url" : "<TODO>",
+  "description": "<TODO>",
+  "license": "MIT",
+  "tags": ["<TODO>"],
+  "classPath": "src",
+  "contributors": [
+    ""
+  ],
+  "releasenote": "<TODO>",
+  "version": "0.0.1",
+  "dependencies": {}
+}

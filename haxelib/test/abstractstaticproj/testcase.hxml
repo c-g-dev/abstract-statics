@@ -1,0 +1,6 @@
+-cp src
+-cp ../../src
+
+-hl testcase.hl
+
+-main Main

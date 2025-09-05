@@ -1,0 +1,17 @@
+{
+  "name": "abstract-statics",
+  "url" : "https://github.com/c-g-dev/abstract-statics",
+  "description": "Macros for abstract static methods + static method forwarding",
+  "license": "MIT",
+  "tags": [
+    "macro", "util"
+  ],
+  "classPath": "src",
+  "contributors": [
+    "cgdev"
+  ],
+  "releasenote": "Initial release",
+  "version": "1.0.0",
+  "dependencies": {
+  }
+}
