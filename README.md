@@ -2,7 +2,7 @@
 
 Abstract static method constraints + Forward static methods to children
 
-The feature that everybody wants but no language ever implements. They will say stuff like "it doesn't make since with the way polymorphism works blah blah blah dogmatist garbage blah blah blah". Well here it is you dumb liars -- simple and easy.
+The feature that everybody wants but no language ever implements. They will say stuff like "it doesn't make sense with the way polymorphism works blah blah blah dogmatist garbage blah blah blah". Well here it is you dumb liars -- simple and easy.
 
 ## Installation
 
